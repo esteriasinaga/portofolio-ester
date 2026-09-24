@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Esteria</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo">
+        <div class="circle"></div>
+        <h1>PORTOFOLIO PRIBADI</h1>
+      </div>
+      <a href="https://wa.me/6281226159474" target="_blank" class="contact-btn">Contact</a>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="home">
+        <!-- Foto di kiri -->
+        <img src="webcam-toy-photo7.jpg" alt="Foto Esteria" width="300" height="350">
+
+        <!-- Tentang Saya di kanan -->
+        <div class="about-me">
+          <h1 class="header">Halo, saya adalah programmer!</h1>
+          <p class="text-span">
+            Mahasiswa Teknologi Informasi dengan minat pada UI/UX, pengembangan web, 
+            dan administrasi sistem Linux. Fokus saya adalah menciptakan solusi digital 
+            yang sederhana namun efektif untuk mahasiswa.
+          </p>
+
+          <h2 class="header">Tentang Saya</h2>
+          <p><strong>Nama:</strong> Esteria Sinaga</p>
+          <p><strong>Umur:</strong> 20 tahun</p>
+          <p><strong>Riwayat Pendidikan:</strong></p>
+          <ul>
+            <li>SD Katolik Yos Sudarso</li>
+            <li>SMP Katolik Santo Petrus</li>
+            <li>SMA Katolik Santo Paulus</li>
+            <li>Mahasiswa Teknologi Informasi Universitas Jember</li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/esteriasinaga_" target="_blank">Instagram</a>
+            <a href="https://github.com/esteria" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/esteria" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JAVASCRIPT DOM -->
+    <script>
+      const socialButtons = document.querySelectorAll(".social-links a");
+      socialButtons.forEach(button => {
+        button.addEventListener("mouseenter", () => {
+          button.style.transform = "scale(1.1)";
+          button.style.transition = "0.3s";
+        });
+        button.addEventListener("mouseleave", () => {
+          button.style.transform = "scale(1)";
+        });
+      });
+    // Tombol Contact → WhatsApp
+      document.getElementById("contactBtn").addEventListener("click", function(e) {
+        e.preventDefault(); // cegah link default
+        window.open("https://wa.me/628123456789", "_blank"); 
+        // ganti 628123456789 dengan nomor WA kamu
+      });
+    </script>
+  </body>
+</html>
